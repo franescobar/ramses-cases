@@ -1,0 +1,63 @@
+
+8888888b.         d8888 888b     d888  .d8888b.  8888888888 .d8888b.  
+888   Y88b       d88888 8888b   d8888 d88P  Y88b 888       d88P  Y88b 
+888    888      d88P888 88888b.d88888 Y88b.      888       Y88b.      
+888   d88P     d88P 888 888Y88888P888  "Y888b.   8888888    "Y888b.   
+8888888P"     d88P  888 888 Y888P 888     "Y88b. 888           "Y88b. 
+888 T88b     d88P   888 888  Y8P  888       "888 888             "888 
+888  T88b   d8888888888 888   "   888 Y88b  d88P 888       Y88b  d88P 
+888   T88b d88P     888 888       888  "Y8888P"  8888888888 "Y8888P" 
+
+RApid Multithreaded Simulation of Electric power Systems
+Version:  3.39 (Full Version)
+
+(c) University of Liege, Belgium
+Execution time: 18:10 04/05/2020
+
+
+
+SOLVER SETTINGS :
+   Using fully decomposed Scheme
+   Updating Jacobian only locally, whenever possible
+   Skipping Newton solution of converged components
+   Using synchronous reference frame
+   Variation of x in Jacobian computation : max( 0.1000E-04 |x|, 0.1000E-04)
+   Tolerance on network equations in pu (system base) :  0.1000E-04 pu
+   Tolerance on injector equations (absolute, relative) :  0.1000E-04 pu,  0.1000E-04 pu
+
+
+
+
+**Parallel computing deactivated by user because $NB_THREADS=1 in settings**
+ 
+
+Total elapsed time                            1.6730 s
+CPU time per thread                           1.6562 s
+
+Profiling
+=========
+Local system building, factorization and Schur complement factors          0.7650 s (45.73 %)
+Reduced system eliminations & factorization (network)                     0.0071 s ( 0.43 %)
+Reduced system solution (TN network)                                       0.0330 s ( 1.97 %)
+Injector evaluation and solution                                           0.3708 s (22.16 %)
+Convergence checks at end of each N-I                                      0.0549 s ( 3.28 %)
+Discrete events and other at end of time step                              0.0135 s ( 0.81 %)
+Discrete controller computation (DCTL)                                     0.0052 s ( 0.31 %)
+Latency computation                                                        0.0004 s ( 0.02 %)
+Writing/displaying Observables                                             0.0199 s ( 1.19 %)
+Time step initialization                                                   0.0602 s ( 3.60 %)
+Remaining time                                                             0.3596 s (21.49 %)
+
+Average time step                             0.0050 s
+
+Time steps                      10004
+
+Network Jacobians                  10
+Network solutions               36537
+Network evaluations             52915
+Injector Jacobians             107743 (on average            15391 per injector)
+Injector solutions             242580 (on average            34654 per injector)
+Injector evaluations           560070 (on average            80010 per injector)
+ 
+**Writing output observables, please wait**
+**Simulation finished**

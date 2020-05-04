@@ -1,0 +1,45 @@
+# Case B: no PSS, AVR and constant torque
+
+               # FP FQ P  Q  SNOM Pnom H   D  IBRATIO
+SYNC_MACH G1 UNO 1. 1. 0. 0. 900  810  6.5 0. 1.6
+  # XT/RL Xl  Xd  X'd X"d  Xq  X'q  X"q  m  n  Ra     T'do T"do T'qo T"qo
+    XT    0.2 1.8 0.3 0.25 1.7 0.55 0.25 0. 1. 0.0025 8.0  0.03 0.4  0.05
+               # IFLIM  d   f  S  K1    K2  L1  L2  G    TA TB TE    L3   L4
+    EXC GENERIC1 2.750 -0.1 0. 1. 100. -1. -20. 0.1 200. 1. 1. 0.01 -100. 100.
+               # SPEEDIN KPSS Tw  T1     T2     T3     T4      DVMIN DVMAX
+                 1.      0.   10. 0.4863 0.1415 0.4863 0.1415 -0.05  0.2
+                      # SIGMA TP  Qv KP   KI  TSM LIMZDOT TW
+    TOR HYDRO_GENERIC1  0.04  2.0 0. 2.00 2.0 0.2 0.1     1.0 ;
+
+               # FP FQ P  Q  SNOM Pnom H   D  IBRATIO
+SYNC_MACH G2 DOS 1. 1. 0. 0. 900  810  6.5 0. 1.6
+  # XT/RL Xl  Xd  X'd X"d  Xq  X'q  X"q  m  n  Ra     T'do T"do T'qo T"qo
+    XT    0.2 1.8 0.3 0.25 1.7 0.55 0.25 0. 1. 0.0025 8.0  0.03 0.4  0.05
+               # IFLIM  d   f  S  K1    K2  L1  L2  G    TA TB TE    L3   L4
+    EXC GENERIC1 2.750 -0.1 0. 1. 100. -1. -20. 0.1 200. 1. 1. 0.01 -100. 100.
+               # SPEEDIN KPSS Tw  T1     T2     T3     T4      DVMIN DVMAX
+                 1.      0.   10. 0.4863 0.1415 0.4863 0.1415 -0.05  0.2
+                      # SIGMA TP  Qv KP   KI  TSM LIMZDOT TW
+    TOR HYDRO_GENERIC1  0.04  2.0 0. 2.00 2.0 0.2 0.1     1.0 ;
+
+                # FP FQ P  Q  SNOM Pnom H     D  IBRATIO
+SYNC_MACH G3 TRES 1. 1. 0. 0. 900  810  6.175 0. 1.6
+  # XT/RL Xl  Xd  X'd X"d  Xq  X'q  X"q  m  n  Ra     T'do T"do T'qo T"qo
+    XT    0.2 1.8 0.3 0.25 1.7 0.55 0.25 0. 1. 0.0025 8.0  0.03 0.4  0.05
+               # IFLIM  d   f  S  K1    K2  L1  L2  G    TA TB TE    L3   L4
+    EXC GENERIC1 2.750 -0.1 0. 1. 100. -1. -20. 0.1 200. 1. 1. 0.01 -100. 100.
+               # SPEEDIN KPSS Tw  T1     T2     T3     T4      DVMIN DVMAX
+                 1.      0.   10. 0.4863 0.1415 0.4863 0.1415 -0.05  0.2
+                      # SIGMA TP  Qv KP   KI  TSM LIMZDOT TW
+    TOR HYDRO_GENERIC1  0.04  2.0 0. 2.00 2.0 0.2 0.1     1.0 ;
+
+                  # FP FQ P  Q  SNOM Pnom H     D  IBRATIO
+SYNC_MACH G4 CUATRO 1. 1. 0. 0. 900  810  6.175 0. 1.6
+  # XT/RL Xl  Xd  X'd X"d  Xq  X'q  X"q  m  n  Ra     T'do T"do T'qo T"qo
+    XT    0.2 1.8 0.3 0.25 1.7 0.55 0.25 0. 1. 0.0025 8.0  0.03 0.4  0.05
+               # IFLIM  d   f  S  K1    K2  L1  L2  G    TA TB TE    L3   L4
+    EXC GENERIC1 2.750 -0.1 0. 1. 100. -1. -20. 0.1 200. 1. 1. 0.01 -100. 100.
+               # SPEEDIN KPSS Tw  T1     T2     T3     T4      DVMIN DVMAX
+                 1.      0.   10. 0.4863 0.1415 0.4863 0.1415 -0.05  0.2
+                      # SIGMA TP  Qv KP   KI  TSM LIMZDOT TW
+    TOR HYDRO_GENERIC1  0.04  2.0 0. 2.00 2.0 0.2 0.1     1.0 ;

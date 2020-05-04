@@ -1,0 +1,80 @@
+COMMENTS FROM DATA FILES:
+
+
+
+
+
+SOLVER SETTINGS :
+   Using fully decomposed Scheme
+   Updating Jacobian only locally, whenever possible
+   Skipping Newton solution of converged components
+   Using synchronous reference frame
+   Variation of x in Jacobian computation : max( 0.1000E-04 |x|, 0.1000E-04)
+   Tolerance on network equations in pu (system base) :  0.1000E-04 pu
+   Tolerance on injector equations (absolute, relative) :  0.1000E-04 pu,  0.1000E-04 pu
+
+
+EXTRACTED RECORDS:
+
+   11 buses extracted from records
+   12 branches extracted from records
+    4 synchronous machines extracted from records
+       for a total of     92 continuous time states
+                          24 discrete exciter states
+                          96 exciter parameters
+                           8 discrete torque states
+                          36 torque parameters
+    0 user-defined two-ports extracted from records
+    3 user-defined injectors extracted from records
+       for a total of     10 continuous time states
+                           5 discrete states
+                          46 parameters
+    6 impedance loads extracted from records or created from mismatches
+    0 discrete controllers extracted from records
+
+NUMBER OF ISLANDS :    1
+
+    11 buses in island #     1
+
+NUMBER OF SHUNTS :     2  (B_ type:     0)
+
+shunt                 at bus                 Qnom island breaker
+
+C7                    SIETE                  200.000      1    1
+C9                    NUEVE                  350.000      1    1
+
+NUMBER OF SYNCHRONOUS MACHINES :    4
+
+machine              at bus                 V            P           Q        delta    sat    island  br
+                     excit model          vf(pu)   torque model               Tm(pu)
+
+G1                   UNO                  1.0300    700.09512    185.04659    43.10   1.0000       1    1
+                     GENERIC1             1.9443   HYDRO_GENERIC1            0.86601
+G2                   DOS                  1.0100    699.99900    234.62851    32.28   1.0000       1    1
+                     GENERIC1             2.0244   HYDRO_GENERIC1            0.86603
+G3                   TRES                 1.0300    718.99988    175.96865    17.14   1.0000       1    1
+                     GENERIC1             1.9578   HYDRO_GENERIC1            0.88943
+G4                   CUATRO               1.0100    699.99921    202.03036     6.01   1.0000       1    1
+                     GENERIC1             1.9778   HYDRO_GENERIC1            0.86598
+
+NUMBER OF INJECTORS :        3
+
+model name         injector name        at bus                  V            P            Q
+
+LOAD                 L7                   SIETE               0.9610   -967.00000   -100.00000
+LOAD                 L9                   NUEVE               0.9714  -1767.00000   -100.00000
+VFAULT               VFAULT               UNO                 1.0300      0.00000      0.00000
+
+NUMBER OF TWO-PORTS :        0
+
+
+NUMBER OF IMPEDANCE LOADS :     6  (M_ type:     6 )
+
+load name              bus name                  P          Q
+
+M_CINCO                CINCO                    0.004      0.003
+M_SEIS                 SEIS                     0.014     -0.006
+M_SIETE                SIETE                    0.005     -0.010
+M_OCHO                 OCHO                    -0.002     -0.016
+M_NUEVE                NUEVE                   -0.034     -0.004
+M_DIEZ                 DIEZ                     0.007     -0.003
